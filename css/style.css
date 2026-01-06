@@ -1,0 +1,9 @@
+.button {
+  background-color: rgba(52, 84, 122, 1);
+  width: 225px;
+  color: rgba(255, 255, 255, 1);
+  padding: 24px 56px;
+}
+.text {
+  color: rgba(114, 114, 114, 1);
+}
