@@ -46,6 +46,12 @@ h1 {
 .menu-item {
   margin-right: 51px;
 }
+.menu {
+  color: black;
+}
+a {
+  color: black;
+}
 .rectangle {
   background-color: rgba(238, 239, 241, 1);
 }
