@@ -1,12 +1,20 @@
-.container {
-  width: 1111px;
-  margin: 0 auto;
-  padding: 79px 0;
-  display: flex;
+body {
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  color: #727272;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
   background-color: #f9f9f9;
 }
 
@@ -59,6 +67,15 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
 .section_icon {
   background-color: #34547a;
   padding-block: 100px;
@@ -74,6 +91,7 @@ li {
   display: flex;
   gap: 20px;
   transition: all 0.5s;
+  align-items: center;
 }
 .li_flex:hover {
   transform: scale(1.15);
@@ -83,9 +101,13 @@ li {
 .span_flex {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .span_text {
   color: white;
+}
+
+.span_size_one {
+  font-size: 21px;
+  font-weight: 500;
 }
