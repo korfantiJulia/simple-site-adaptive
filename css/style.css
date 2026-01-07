@@ -90,7 +90,7 @@ a {
   letter-spacing: 10%;
 }
 .header_link:hover {
-  color: red;
+  color: #34547a;
   transition: all 0.5s;
 }
 
@@ -114,22 +114,21 @@ a {
   letter-spacing: 1.6px;
   margin-bottom: 140px;
   cursor: pointer;
-  border-radius: 5px;
 }
 .header_button:hover {
   background-color: red;
   transition: all 0.5s;
   transform: scale(1.15);
-  border-radius: 50px;
+  border-radius: 15px;
 }
 /* Section Hero */
 
 /* Section about */
-.about {
+.about-me {
   background-color: #eeeff187;
 }
 
-.about_content {
+.about-me__content {
   width: 540px;
   padding-block: 100px;
   margin: auto;
