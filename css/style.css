@@ -1,8 +1,11 @@
 :root {
   --bg-color-one: #eeeff1;
   --bg-color-second: #34547a;
+  --bg-color-third: #eeeff187;
   --hover-color: red;
   --title-color: black;
+  --text-color: #727272;
+  --white-text: white;
 }
 
 html {
@@ -15,7 +18,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #727272;
+  color: var(--text-color);
   margin: 0;
 }
 
@@ -65,11 +68,11 @@ a {
 }
 
 .header_link {
-  color: black;
+  color: var(--title-color);
   letter-spacing: 10%;
 }
 .header_link:hover {
-  color: var(--hover-color);
+  color: var(--bg-color-second);
   transition: all 0.5s;
 }
 
@@ -88,7 +91,7 @@ a {
 .header_button {
   background-color: var(--bg-color-second);
   padding: 15px 40px;
-  color: white;
+  color: var(--white-text);
   border: none;
   letter-spacing: 1.6px;
   margin-bottom: 140px;
@@ -104,7 +107,7 @@ a {
 
 /* Section about */
 .about-me {
-  background-color: #eeeff187;
+  background-color: var(--bg-color-third);
 }
 
 .about-me__content {
@@ -151,7 +154,7 @@ a {
 }
 
 .span_text {
-  color: white;
+  color: var(--white-text);
 }
 
 .span_size_one {
@@ -215,14 +218,14 @@ a {
 }
 
 .name {
-  color: white;
+  color: var(--white-text);
   line-height: 1.5;
   font-size: 21px;
   margin-bottom: 20px;
 }
 
 .copyright {
-  color: white;
+  color: var(--white-text);
   line-height: 1.5;
 }
 /* Footer */
