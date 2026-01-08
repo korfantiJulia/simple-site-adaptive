@@ -1,3 +1,10 @@
+:root {
+  --bg-color-one: #eeeff1;
+  --bg-color-second: #34547a;
+  --hover-color: red;
+  --title-color: black;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -40,37 +47,9 @@ a {
   margin: 0 auto;
 }
 
-/* .button {
-  background-color: rgba(52, 84, 122, 1);
-  width: 225px;
-  color: rgba(255, 255, 255, 1);
-  padding: 24px 56px;
-}
-h1 {
-  margin-top: 170px;
-}
-.text {
-  color: rgba(114, 114, 114, 1);
-  margin: 60px;
-  margin-left: 0;
-  width: 540px;
-}
-.menu-item {
-  margin-right: 51px;
-}
-.menu {
-  color: black;
-}
-a {
-  color: black;
-}
-.rectangle {
-  background-color: rgba(238, 239, 241, 1);
-} */
-
 /* Section Hero */
 .hero {
-  background-color: #eeeff1;
+  background-color: var(--bg-color-one);
 }
 
 .header {
@@ -90,14 +69,14 @@ a {
   letter-spacing: 10%;
 }
 .header_link:hover {
-  color: #34547a;
+  color: var(--hover-color);
   transition: all 0.5s;
 }
 
 .hero_title {
   font-weight: 500;
   font-size: 48px;
-  color: black;
+  color: var(--title-color);
   margin-bottom: 60px;
 }
 
@@ -107,7 +86,7 @@ a {
 }
 
 .header_button {
-  background-color: #34547a;
+  background-color: var(--bg-color-second);
   padding: 15px 40px;
   color: white;
   border: none;
@@ -116,7 +95,7 @@ a {
   cursor: pointer;
 }
 .header_button:hover {
-  background-color: red;
+  background-color: var(--hover-color);
   transition: all 0.5s;
   transform: scale(1.15);
   border-radius: 15px;
@@ -139,25 +118,20 @@ a {
   font-size: 32px;
   font-weight: 500;
   margin-bottom: 50px;
-  font-size: 32px;
-  color: black;
-}
-
-.about-me__text {
-  color: #727272;
+  color: var(--title-color);
 }
 /* Section about
 
 /* Section icon */
 .section_icon {
-  background-color: #34547a;
+  background-color: var(--bg-color-second);
   padding-block: 100px;
 }
 
 .ul_flex {
   display: flex;
   gap: 45px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .li_flex {
@@ -187,42 +161,22 @@ a {
 /* Section icon */
 
 /* How_I_Work section */
-
-.container_how_i_work {
-  width: 1111px;
-  margin: 0 405px;
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-  justify-content: center;
+.section_how_i_work {
+  background-color: var(--bg-color-one);
 }
 
 .video {
-  margin-bottom: 57px;
+  width: 540px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 100px 0px 55px;
 }
 
-.how_i_work h2 {
-  width: 403px;
-  height: 30px;
-  text-align: center;
-  margin: 0px auto;
+.how_i_work {
   font-size: 32px;
   font-weight: 500;
-  color: #000000;
-}
-
-.video_text {
-  width: 540px;
-  height: 67px;
-  text-align: center;
-  color: #727272;
-  margin-top: 50px;
-  font-size: 16px;
-  font-weight: 400;
+  color: var(--title-color);
+  margin-bottom: 50px;
 }
 
 .video_block {
@@ -230,53 +184,45 @@ a {
 }
 
 .video_player {
-  width: 1110px;
-  height: 600px;
-  opacity: 1;
   max-width: 100%;
   display: block;
-  object-fit: cover;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .play_button {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -100%);
+  top: 35%;
+  left: 45%;
   width: 100px;
   height: 100px;
   cursor: pointer;
 }
+.play_button:hover {
+  transform: scale(1.15);
+  transition: all 0.5s;
+  background-color: var(--hover-color);
+  border-radius: 50%;
+}
+/* How_I_Work section */
 
+/* Footer */
 .footer-block {
-  display: flex;
-  height: 151px;
-  background-color: #34547a;
-  align-items: center;
-  padding-left: 405px;
+  background-color: var(--bg-color-second);
+}
+
+.footer_content {
+  padding-block: 50px;
 }
 
 .name {
-  width: 219px;
   color: white;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
   line-height: 1.5;
-  align-items: center;
   font-size: 21px;
+  margin-bottom: 20px;
 }
 
 .copyright {
-  width: 193px;
   color: white;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
   line-height: 1.5;
-  font-size: small;
-  padding-top: 20px;
 }
-
-.section_how_i_work {
-  background-color: #eeeff1;
-}
+/* Footer */
