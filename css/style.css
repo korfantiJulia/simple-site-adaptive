@@ -106,6 +106,26 @@ a {
   transform: scale(1.15);
   border-radius: 15px;
 }
+
+.burger input {
+  display: none;
+}
+
+.burger__btn {
+  display: none;
+  width: 30px;
+  height: 22px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger__btn span {
+  height: 3px;
+  background-color: var(--bg-color-second);
+  border-radius: 2px;
+}
+
 /* Section Hero */
 
 /* Section about */
@@ -169,6 +189,7 @@ a {
 /* How_I_Work section */
 .section-how-i-work {
   background-color: var(--bg-color-one);
+  padding-bottom: 100px;
 }
 
 .video {
@@ -192,19 +213,21 @@ a {
 .video-block__player {
   max-width: 100%;
   display: block;
-  padding-bottom: 100px;
 }
 
 .video-block__play-button {
   position: absolute;
-  top: 35%;
-  left: 45%;
-  width: 100px;
-  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15%;
+  max-width: 100px;
+  min-width: 40px;
+  height: auto;
   cursor: pointer;
 }
 .video-block__play-button:hover {
-  transform: scale(1.15);
+  transform: translate(-50%, -50%) scale(1.15);
   transition: all 0.5s;
   background-color: var(--bg-color-second);
   border-radius: 50%;
@@ -232,3 +255,220 @@ a {
   line-height: 1.5;
 }
 /* Footer */
+
+@media (max-width: 1200px) {
+  .container {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .section-icon__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 50px 0 70px;
+  }
+
+  .hero {
+    padding-bottom: 70px;
+  }
+
+  .hero__title {
+    margin-bottom: 40px;
+  }
+
+  .about-me__content {
+    padding-block: 50px;
+  }
+
+  .section-icon {
+    padding-block: 50px;
+  }
+
+  .video {
+    padding-block: 50px;
+  }
+
+  .section-how-i-work__title {
+    margin-bottom: 30px;
+  }
+
+  .section-how-i-work {
+    padding-bottom: 70px;
+  }
+
+  .footer-block__content {
+    padding-block: 30px;
+  }
+}
+
+@media (max-width: 670px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .about-me__title,
+  .section-how-i-work__title {
+    font-size: 28px;
+  }
+
+  .footer-block__name {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .footer-block__copyright {
+    font-size: 12px;
+  }
+
+  .burger__btn {
+    display: flex;
+  }
+
+  .header__items {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--bg-color-one);
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 12px;
+  }
+
+  #burger-toggle:checked + .burger__btn + .header__items {
+    display: flex;
+  }
+
+  .header__item:hover {
+    transform: none;
+  }
+
+  .header {
+    padding-bottom: 30px;
+  }
+
+  .hero__desc {
+    width: auto;
+    margin-bottom: 40px;
+  }
+
+  .header__button {
+    padding: 15px 30px;
+  }
+
+  .about-me__content {
+    width: auto;
+    padding: 50px;
+  }
+
+  .video {
+    width: auto;
+    padding: 50px;
+  }
+
+  .footer-block__content {
+    padding-block: 20px;
+  }
+
+  .section-icon__item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .icon-text__span {
+    font-size: 12px;
+  }
+
+  .icon-text__span-size-one {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 470px) {
+  .section-icon__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .hero__title {
+    font-size: 28px;
+  }
+
+  .about-me__title,
+  .section-how-i-work__title {
+    font-size: 22px;
+  }
+
+  .footer-block__name {
+    font-size: 14px;
+  }
+
+  .header {
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+
+  .hero {
+    padding-bottom: 50px;
+  }
+
+  .hero__title {
+    margin-bottom: 30px;
+  }
+
+  .hero__desc {
+    margin-bottom: 30px;
+  }
+
+  .about-me__title {
+    margin-bottom: 20px;
+  }
+
+  .about-me__content {
+    padding-block: 30px;
+  }
+
+  .section-icon {
+    padding-block: 30px;
+  }
+
+  .video {
+    padding-block: 30px;
+  }
+
+  .section-how-i-work__title {
+    margin-bottom: 20px;
+  }
+
+  .section-how-i-work {
+    padding-bottom: 50px;
+  }
+
+  .footer-block__content {
+    padding-block: 20px;
+  }
+}
