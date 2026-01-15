@@ -1,0 +1,27 @@
+@use "variables";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: variables.$title-color;
+  margin: 0;
+
+  @media (max-width: variables.$media_md) {
+    & {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: variables.$media_sm) {
+    & {
+      font-size: 12px;
+    }
+  }
+}

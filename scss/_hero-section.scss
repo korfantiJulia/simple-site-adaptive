@@ -1,0 +1,183 @@
+@use "variables";
+@use "mixins";
+
+.hero {
+  background-color: variables.$bg-color-one;
+  padding-bottom: 140px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 48px;
+    color: variables.$title-color;
+    margin-bottom: 60px;
+
+    @media (max-width: variables.$media_lg) {
+      & {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (max-width: variables.$media_md) {
+      & {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: variables.$media_sm) {
+      & {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__desc {
+    width: 540px;
+    margin-bottom: 60px;
+
+    @media (max-width: variables.$media_md) {
+      & {
+        width: auto;
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (max-width: variables.$media_sm) {
+      & {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @media (max-width: variables.$media_lg) {
+    & {
+      padding-bottom: 70px;
+    }
+  }
+
+  @media (max-width: variables.$media_sm) {
+    & {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.header {
+  padding: 80px 0 115px;
+
+  &__items {
+    display: flex;
+    gap: 50px;
+
+    @media (max-width: variables.$media_md) {
+      & {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        background-color: variables.$bg-color-one;
+        padding: 30px;
+        margin-top: 20px;
+        border-radius: 12px;
+      }
+    }
+  }
+
+  &__item:hover {
+    transition: all 0.5s;
+    transform: scale(1.15);
+
+    @media (max-width: variables.$media_md) {
+      & {
+        transform: none;
+      }
+    }
+  }
+
+  &__link {
+    color: variables.$title-color;
+    letter-spacing: 2px;
+
+    &:hover {
+      color: variables.$bg-color-second;
+      transition: all 0.5s;
+    }
+
+    &--active {
+      color: variables.$bg-color-second;
+      transition: all 0.5s;
+    }
+  }
+
+  &__button {
+    background-color: variables.$bg-color-second;
+    padding: 15px 40px;
+    color: variables.$white-text;
+    border: none;
+    letter-spacing: 1.6px;
+    cursor: pointer;
+
+    &:hover {
+      transition: all 0.5s;
+      transform: scale(1.15);
+      border-radius: 15px;
+    }
+
+    @media (max-width: variables.$media_md) {
+      & {
+        padding: 15px 30px;
+      }
+    }
+  }
+
+  @media (max-width: variables.$media_lg) {
+    & {
+      padding: 50px 0 70px;
+    }
+  }
+
+  @media (max-width: variables.$media_md) {
+    & {
+      padding-bottom: 30px;
+    }
+  }
+
+  @media (max-width: variables.$media_sm) {
+    & {
+      padding-bottom: 20px;
+      padding-top: 30px;
+    }
+  }
+}
+
+.burger {
+  input {
+    display: none;
+  }
+
+  &__btn {
+    display: none;
+    width: 30px;
+    height: 22px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    @media (max-width: variables.$media_md) {
+      & {
+        display: flex;
+      }
+    }
+  }
+
+  span {
+    height: 3px;
+    background-color: variables.$bg-color-second;
+    border-radius: 2px;
+  }
+}
+
+@media (max-width: variables.$media_md) {
+  #burger-toggle:checked + .burger__btn + .header__items {
+    display: flex;
+  }
+}

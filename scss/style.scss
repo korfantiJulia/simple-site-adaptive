@@ -1,0 +1,51 @@
+@use "importer";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+
+  @media (max-width: importer.$media_lg) {
+    & {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+
+  @media (max-width: importer.$media_md) {
+    & {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  }
+
+  @media (max-width: importer.$media_sm) {
+    & {
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+  }
+}
