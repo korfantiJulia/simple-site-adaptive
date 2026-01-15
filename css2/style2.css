@@ -1,41 +1,3 @@
-/* Section icon */
-.section-icon {
-  background-color: var(--bg-color-second);
-  padding-block: 100px;
-}
-
-.section-icon__items {
-  display: flex;
-  gap: 45px;
-  justify-content: space-between;
-}
-
-.section-icon__item {
-  display: flex;
-  gap: 20px;
-  transition: all 0.5s;
-  align-items: center;
-}
-.section-icon__item:hover {
-  transform: scale(1.15);
-  transition: all 0.5s;
-}
-
-.icon-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.icon-text__span {
-  color: var(--white-text);
-}
-
-.icon-text__span-size-one {
-  font-size: 21px;
-  font-weight: 500;
-}
-/* Section icon */
-
 /* How_I_Work section */
 .section-how-i-work {
   background-color: var(--bg-color-one);
@@ -106,19 +68,7 @@
 }
 /* Footer */
 
-@media (max-width: 1200px) {
-  .section-icon__items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-}
-
 @media (max-width: 900px) {
-  .section-icon {
-    padding-block: 50px;
-  }
-
   .video {
     padding-block: 50px;
   }
@@ -158,38 +108,15 @@
   .footer-block__content {
     padding-block: 20px;
   }
-
-  .section-icon__item img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .icon-text__span {
-    font-size: 12px;
-  }
-
-  .icon-text__span-size-one {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 470px) {
-  .section-icon__items {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
   .section-how-i-work__title {
     font-size: 22px;
   }
 
   .footer-block__name {
     font-size: 14px;
-  }
-
-  .section-icon {
-    padding-block: 30px;
   }
 
   .video {

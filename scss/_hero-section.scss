@@ -12,22 +12,16 @@
     margin-bottom: 60px;
 
     @media (max-width: variables.$media_lg) {
-      & {
-        margin-bottom: 40px;
-      }
+      margin-bottom: 40px;
     }
 
     @media (max-width: variables.$media_md) {
-      & {
-        font-size: 36px;
-      }
+      font-size: 36px;
     }
 
     @media (max-width: variables.$media_sm) {
-      & {
-        font-size: 28px;
-        margin-bottom: 30px;
-      }
+      font-size: 28px;
+      margin-bottom: 30px;
     }
   }
 
@@ -36,29 +30,21 @@
     margin-bottom: 60px;
 
     @media (max-width: variables.$media_md) {
-      & {
-        width: auto;
-        margin-bottom: 40px;
-      }
+      width: auto;
+      margin-bottom: 40px;
     }
 
     @media (max-width: variables.$media_sm) {
-      & {
-        margin-bottom: 30px;
-      }
+      margin-bottom: 30px;
     }
   }
 
   @media (max-width: variables.$media_lg) {
-    & {
-      padding-bottom: 70px;
-    }
+    padding-bottom: 70px;
   }
 
   @media (max-width: variables.$media_sm) {
-    & {
-      padding-bottom: 50px;
-    }
+    padding-bottom: 50px;
   }
 }
 
@@ -70,15 +56,13 @@
     gap: 50px;
 
     @media (max-width: variables.$media_md) {
-      & {
-        display: none;
-        flex-direction: column;
-        gap: 20px;
-        background-color: variables.$bg-color-one;
-        padding: 30px;
-        margin-top: 20px;
-        border-radius: 12px;
-      }
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      background-color: variables.$bg-color-one;
+      padding: 30px;
+      margin-top: 20px;
+      border-radius: 12px;
     }
   }
 
@@ -87,9 +71,7 @@
     transform: scale(1.15);
 
     @media (max-width: variables.$media_md) {
-      & {
-        transform: none;
-      }
+      transform: none;
     }
   }
 
@@ -123,29 +105,21 @@
     }
 
     @media (max-width: variables.$media_md) {
-      & {
-        padding: 15px 30px;
-      }
+      padding: 15px 30px;
     }
   }
 
   @media (max-width: variables.$media_lg) {
-    & {
-      padding: 50px 0 70px;
-    }
+    padding: 50px 0 70px;
   }
 
   @media (max-width: variables.$media_md) {
-    & {
-      padding-bottom: 30px;
-    }
+    padding-bottom: 30px;
   }
 
   @media (max-width: variables.$media_sm) {
-    & {
-      padding-bottom: 20px;
-      padding-top: 30px;
-    }
+    padding-bottom: 20px;
+    padding-top: 30px;
   }
 }
 
@@ -163,9 +137,7 @@
     cursor: pointer;
 
     @media (max-width: variables.$media_md) {
-      & {
-        display: flex;
-      }
+      display: flex;
     }
   }
 

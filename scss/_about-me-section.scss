@@ -11,22 +11,16 @@
     text-align: center;
 
     @media (max-width: variables.$media_lg) {
-      & {
-        padding-block: 50px;
-      }
+      padding-block: 50px;
     }
 
     @media (max-width: variables.$media_md) {
-      & {
-        width: auto;
-        padding: 50px;
-      }
+      width: auto;
+      padding: 50px;
     }
 
     @media (max-width: variables.$media_sm) {
-      & {
-        padding-block: 30px;
-      }
+      padding-block: 30px;
     }
   }
 
@@ -37,16 +31,12 @@
     color: variables.$title-color;
 
     @media (max-width: variables.$media_md) {
-      & {
-        font-size: 28px;
-      }
+      font-size: 28px;
     }
 
     @media (max-width: variables.$media_sm) {
-      & {
-        font-size: 22px;
-        margin-bottom: 20px;
-      }
+      font-size: 22px;
+      margin-bottom: 20px;
     }
   }
 }
