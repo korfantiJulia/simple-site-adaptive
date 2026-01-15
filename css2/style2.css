@@ -1,51 +1,3 @@
-/* How_I_Work section */
-.section-how-i-work {
-  background-color: var(--bg-color-one);
-  padding-bottom: 100px;
-}
-
-.video {
-  width: 540px;
-  text-align: center;
-  margin: 0 auto;
-  padding: 100px 0px 55px;
-}
-
-.section-how-i-work__title {
-  font-size: 32px;
-  font-weight: 500;
-  color: var(--title-color);
-  margin-bottom: 50px;
-}
-
-.video-block {
-  position: relative;
-}
-
-.video-block__player {
-  max-width: 100%;
-  display: block;
-}
-
-.video-block__play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 15%;
-  max-width: 100px;
-  min-width: 40px;
-  height: auto;
-  cursor: pointer;
-}
-.video-block__play-button:hover {
-  transform: translate(-50%, -50%) scale(1.15);
-  transition: all 0.5s;
-  background-color: var(--bg-color-second);
-  border-radius: 50%;
-}
-/* How_I_Work section */
-
 /* Footer */
 .footer-block {
   background-color: var(--bg-color-second);
@@ -69,28 +21,12 @@
 /* Footer */
 
 @media (max-width: 900px) {
-  .video {
-    padding-block: 50px;
-  }
-
-  .section-how-i-work__title {
-    margin-bottom: 30px;
-  }
-
-  .section-how-i-work {
-    padding-bottom: 70px;
-  }
-
   .footer-block__content {
     padding-block: 30px;
   }
 }
 
 @media (max-width: 670px) {
-  .section-how-i-work__title {
-    font-size: 28px;
-  }
-
   .footer-block__name {
     font-size: 16px;
     margin-bottom: 10px;
@@ -100,35 +36,14 @@
     font-size: 12px;
   }
 
-  .video {
-    width: auto;
-    padding: 50px;
-  }
-
   .footer-block__content {
     padding-block: 20px;
   }
 }
 
 @media (max-width: 470px) {
-  .section-how-i-work__title {
-    font-size: 22px;
-  }
-
   .footer-block__name {
     font-size: 14px;
-  }
-
-  .video {
-    padding-block: 30px;
-  }
-
-  .section-how-i-work__title {
-    margin-bottom: 20px;
-  }
-
-  .section-how-i-work {
-    padding-bottom: 50px;
   }
 
   .footer-block__content {
