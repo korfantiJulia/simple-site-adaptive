@@ -1,0 +1,72 @@
+@use "variables";
+@use "mixins";
+
+.section-icon {
+  background-color: variables.$bg-color-second;
+  padding-block: 100px;
+
+  &__items {
+    display: flex;
+    gap: 45px;
+    justify-content: space-between;
+
+    @include mixins.respond(xl) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    @include mixins.respond(sm) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+  }
+
+  &__item {
+    @include mixins.flex-center;
+    gap: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      @include mixins.hover-scale;
+    }
+
+    @include mixins.respond(md) {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  @include mixins.respond(lg) {
+    padding-block: 50px;
+  }
+
+  @include mixins.respond(sm) {
+    padding-block: 30px;
+  }
+}
+
+.icon-text {
+  display: flex;
+  flex-direction: column;
+
+  &__span {
+    color: variables.$white-text;
+
+    &-size-one {
+      font-size: 21px;
+      font-weight: 500;
+
+      @include mixins.respond(md) {
+        font-size: 16px;
+      }
+    }
+
+    @include mixins.respond(md) {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use "importer";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+
+  @include importer.respond(xl) {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  @include importer.respond(md) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  @include importer.respond(sm) {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}

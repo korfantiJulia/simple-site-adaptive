@@ -1,0 +1,40 @@
+@use "variables";
+@use "mixins";
+
+.about-me {
+  background-color: variables.$bg-color-third;
+
+  &__content {
+    width: 540px;
+    padding-block: 100px;
+    margin: auto;
+    text-align: center;
+
+    @include mixins.respond(lg) {
+      padding-block: 50px;
+    }
+
+    @include mixins.respond(md) {
+      width: auto;
+      padding: 50px;
+    }
+
+    @include mixins.respond(sm) {
+      padding-block: 30px;
+    }
+  }
+
+  &__title {
+    @include mixins.title(32px);
+    margin-bottom: 50px;
+
+    @include mixins.respond(md) {
+      font-size: 28px;
+    }
+
+    @include mixins.respond(sm) {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
+}
