@@ -28,24 +28,18 @@ a {
   max-width: 1110px;
   margin: 0 auto;
 
-  @media (max-width: importer.$media_lg) {
-    & {
-      margin-left: 50px;
-      margin-right: 50px;
-    }
+  @include importer.respond(xl) {
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
-  @media (max-width: importer.$media_md) {
-    & {
-      margin-left: 40px;
-      margin-right: 40px;
-    }
+  @include importer.respond(md) {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
-  @media (max-width: importer.$media_sm) {
-    & {
-      margin-left: 35px;
-      margin-right: 35px;
-    }
+  @include importer.respond(sm) {
+    margin-left: 35px;
+    margin-right: 35px;
   }
 }

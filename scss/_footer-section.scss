@@ -7,27 +7,26 @@
   &__content {
     padding-block: 50px;
 
-    @media (max-width: variables.$media_lg) {
+    @include mixins.respond(lg) {
       padding-block: 30px;
     }
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       padding-block: 20px;
     }
   }
 
   &__name {
-    color: variables.$white-text;
-    line-height: 1.5;
+    @extend .footer-block__copyright;
     font-size: 21px;
     margin-bottom: 20px;
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       font-size: 16px;
       margin-bottom: 10px;
     }
 
-    @media (max-width: variables.$media_sm) {
+    @include mixins.respond(sm) {
       font-size: 14px;
     }
   }
@@ -36,7 +35,7 @@
     color: variables.$white-text;
     line-height: 1.5;
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       font-size: 12px;
     }
   }

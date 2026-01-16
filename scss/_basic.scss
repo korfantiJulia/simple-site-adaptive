@@ -1,4 +1,5 @@
 @use "variables";
+@use "mixins";
 
 html {
   scroll-behavior: smooth;
@@ -13,15 +14,11 @@ body {
   color: variables.$text-color;
   margin: 0;
 
-  @media (max-width: variables.$media_md) {
-    & {
-      font-size: 14px;
-    }
+  @include mixins.respond(md) {
+    font-size: 14px;
   }
 
-  @media (max-width: variables.$media_sm) {
-    & {
-      font-size: 12px;
-    }
+  @include mixins.respond(sm) {
+    font-size: 12px;
   }
 }

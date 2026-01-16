@@ -10,31 +10,29 @@
     margin: auto;
     text-align: center;
 
-    @media (max-width: variables.$media_lg) {
+    @include mixins.respond(lg) {
       padding-block: 50px;
     }
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       width: auto;
       padding: 50px;
     }
 
-    @media (max-width: variables.$media_sm) {
+    @include mixins.respond(sm) {
       padding-block: 30px;
     }
   }
 
   &__title {
-    font-size: 32px;
-    font-weight: 500;
+    @include mixins.title(32px);
     margin-bottom: 50px;
-    color: variables.$title-color;
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       font-size: 28px;
     }
 
-    @media (max-width: variables.$media_sm) {
+    @include mixins.respond(sm) {
       font-size: 22px;
       margin-bottom: 20px;
     }

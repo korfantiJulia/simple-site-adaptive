@@ -6,30 +6,28 @@
   padding-bottom: 100px;
 
   &__title {
-    font-size: 32px;
-    font-weight: 500;
-    color: variables.$title-color;
+    @include mixins.title(32px);
     margin-bottom: 50px;
 
-    @media (max-width: variables.$media_lg) {
+    @include mixins.respond(lg) {
       margin-bottom: 30px;
     }
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       font-size: 28px;
     }
 
-    @media (max-width: variables.$media_sm) {
+    @include mixins.respond(sm) {
       font-size: 22px;
       margin-bottom: 20px;
     }
   }
 
-  @media (max-width: variables.$media_lg) {
+  @include mixins.respond(lg) {
     padding-bottom: 70px;
   }
 
-  @media (max-width: variables.$media_sm) {
+  @include mixins.respond(sm) {
     padding-bottom: 50px;
   }
 }
@@ -40,16 +38,16 @@
   margin: 0 auto;
   padding: 100px 0px 55px;
 
-  @media (max-width: variables.$media_lg) {
+  @include mixins.respond(lg) {
     padding-block: 50px;
   }
 
-  @media (max-width: variables.$media_md) {
+  @include mixins.respond(md) {
     width: auto;
     padding: 50px;
   }
 
-  @media (max-width: variables.$media_sm) {
+  @include mixins.respond(sm) {
     padding-block: 30px;
   }
 }
@@ -63,10 +61,7 @@
   }
 
   &__play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include mixins.absolute-center;
     width: 15%;
     max-width: 100px;
     min-width: 40px;

@@ -1,0 +1,63 @@
+@use "variables";
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == xl {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media (max-width: 670px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm {
+    @media (max-width: 470px) {
+      @content;
+    }
+  }
+}
+
+@mixin hover-scale($scale: 1.15) {
+  transition: all 0.5s;
+
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin title($size) {
+  font-weight: 500;
+  color: variables.$title-color;
+  font-size: $size;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  border: none;
+  letter-spacing: 1.6px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

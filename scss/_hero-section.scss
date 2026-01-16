@@ -6,20 +6,18 @@
   padding-bottom: 140px;
 
   &__title {
-    font-weight: 500;
-    font-size: 48px;
-    color: variables.$title-color;
+    @include mixins.title(48px);
     margin-bottom: 60px;
 
-    @media (max-width: variables.$media_lg) {
+    @include mixins.respond(lg) {
       margin-bottom: 40px;
     }
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       font-size: 36px;
     }
 
-    @media (max-width: variables.$media_sm) {
+    @include mixins.respond(sm) {
       font-size: 28px;
       margin-bottom: 30px;
     }
@@ -29,21 +27,21 @@
     width: 540px;
     margin-bottom: 60px;
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       width: auto;
       margin-bottom: 40px;
     }
 
-    @media (max-width: variables.$media_sm) {
+    @include mixins.respond(sm) {
       margin-bottom: 30px;
     }
   }
 
-  @media (max-width: variables.$media_lg) {
+  @include mixins.respond(lg) {
     padding-bottom: 70px;
   }
 
-  @media (max-width: variables.$media_sm) {
+  @include mixins.respond(sm) {
     padding-bottom: 50px;
   }
 }
@@ -55,7 +53,7 @@
     display: flex;
     gap: 50px;
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       display: none;
       flex-direction: column;
       gap: 20px;
@@ -67,10 +65,9 @@
   }
 
   &__item:hover {
-    transition: all 0.5s;
-    transform: scale(1.15);
+    @include mixins.hover-scale;
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       transform: none;
     }
   }
@@ -91,33 +88,28 @@
   }
 
   &__button {
-    background-color: variables.$bg-color-second;
+    @include mixins.button(variables.$bg-color-second, variables.$white-text);
     padding: 15px 40px;
-    color: variables.$white-text;
-    border: none;
-    letter-spacing: 1.6px;
-    cursor: pointer;
 
     &:hover {
-      transition: all 0.5s;
-      transform: scale(1.15);
+      @include mixins.hover-scale;
       border-radius: 15px;
     }
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       padding: 15px 30px;
     }
   }
 
-  @media (max-width: variables.$media_lg) {
+  @include mixins.respond(lg) {
     padding: 50px 0 70px;
   }
 
-  @media (max-width: variables.$media_md) {
+  @include mixins.respond(md) {
     padding-bottom: 30px;
   }
 
-  @media (max-width: variables.$media_sm) {
+  @include mixins.respond(sm) {
     padding-bottom: 20px;
     padding-top: 30px;
   }
@@ -136,7 +128,7 @@
     justify-content: space-between;
     cursor: pointer;
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       display: flex;
     }
   }
@@ -148,7 +140,7 @@
   }
 }
 
-@media (max-width: variables.$media_md) {
+@include mixins.respond(md) {
   #burger-toggle:checked + .burger__btn + .header__items {
     display: flex;
   }

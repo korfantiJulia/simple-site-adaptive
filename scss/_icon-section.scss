@@ -10,13 +10,13 @@
     gap: 45px;
     justify-content: space-between;
 
-    @media (max-width: variables.$media_xl) {
+    @include mixins.respond(xl) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
     }
 
-    @media (max-width: variables.$media_sm) {
+    @include mixins.respond(sm) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 25px;
@@ -24,28 +24,27 @@
   }
 
   &__item {
-    display: flex;
+    @include mixins.flex-center;
     gap: 20px;
     transition: all 0.5s;
-    align-items: center;
+    cursor: pointer;
 
     &:hover {
-      transform: scale(1.15);
-      transition: all 0.5s;
+      @include mixins.hover-scale;
     }
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       img {
         width: 30px;
         height: 30px;
       }
     }
   }
-  @media (max-width: variables.$media_lg) {
+  @include mixins.respond(lg) {
     padding-block: 50px;
   }
 
-  @media (max-width: variables.$media_sm) {
+  @include mixins.respond(sm) {
     padding-block: 30px;
   }
 }
@@ -61,12 +60,12 @@
       font-size: 21px;
       font-weight: 500;
 
-      @media (max-width: variables.$media_md) {
+      @include mixins.respond(md) {
         font-size: 16px;
       }
     }
 
-    @media (max-width: variables.$media_md) {
+    @include mixins.respond(md) {
       font-size: 12px;
     }
   }
